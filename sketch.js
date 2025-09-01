@@ -3,7 +3,7 @@
 let cartoon
 
 function preload(){
-  cartoon=loadImage('Cartoon.png')
+  cartoon=loadImage('cartoon.png')
 
 
 }
