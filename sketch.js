@@ -3,7 +3,7 @@
 let cartoon
 
 function preload(){
-  cartoon=loadImage('Cartoon.jpg')
+  cartoon=loadImage('Cartoon.png')
 
 
 }
@@ -12,14 +12,24 @@ function setup() {
   rectMode(CENTER)
 
 
-}
+} 
+
 
 
 //draw runs in a loop
 function draw() {
   background(106, 219, 247);
-  image(cartoon, windowWidth/2, windowHeight/2)
-  
+
+  if(mouseX >= 100 && mouseX <= 600 && mouseY >= 0 && mouseY <= 500){ 
+    image(cartoon, windowWidth-400, 100, 300, 300)
+  } else{
+    if(mouseIsPressed || keyIsPressed) {
+      image(cartoon, windowWidth-400, 300, 300, 300)
+    } else{
+      image(cartoon, windowWidth-400, 100, 300, 300)
+    }
+  }
+
   //ellipse style
   fill(252, 237, 197)
   ellipse(350, 250, 500, 500)
@@ -44,8 +54,8 @@ function draw() {
   
   //rect styles
   fill(97, 250, 130)
-  rect(width/4.3, height/-14, 10,10)
-  rect(width/-14, height/-14, 10,10)
+  rect(width/9, height/-20, 10,10)
+  rect(width/-27, height/-20, 10,10)
   
    //line  
   strokeWeight(5)
@@ -56,12 +66,24 @@ function draw() {
   strokeWeight(4)
   curve(1000, -0, -70, 300, -50, -230, 1000, -100);
   curve(-1000, 40, 220, 300, 130, -240, -1000, 100);
- 
-  //square styles
-  fill(209, 17, 17)
-  square(57, 150, 30)
   
  
+  if(mouseX >= 100 && mouseX <= 600 && mouseY >= 0 && mouseY <= 500){ 
+    if(mouseIsPressed || keyIsPressed) {
+//square styles
+  fill(209, 17, 17)
+
+  square(57, 150, 100)
+    } else {
+//square styles
+  fill(209, 17, 17)
+  square(57, 150, 30)
+    }
+  } else{
+    //square styles
+  fill(209, 17, 17)
+  square(57, 150, 30)
+  }
   
   
   
