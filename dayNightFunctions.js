@@ -42,7 +42,7 @@ function draw(){
 function dayScene(){
 	//add as much as you want to this function!
 	background(52, 137, 235)
-	fill(235, 137, 26)
+	fill(240, 245, 103)
 	ellipse(windowWidth/2, windowHeight/2, 200, 200)
 	fill(0)
 	ellipse(windowWidth/2.1, windowHeight/2.1, 20, 20)
